@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infotecs test</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="js/script.js"></script>
+  </head>
+  <body>
+    <form name="sort_and_amount">
+      <span class="form_text">Enter amount of products</span>
+      <input
+        type="number"
+        id="inputt"
+        name="amount"
+        value="10"
+        pattern="^[0-9]$"
+      />
+      <span class="form_text">Choose sort</span>
+      <select id="select_tag" name="sorting_type" size="4">
+        <option value="title" selected>Title</option>
+        <option value="brand" selected>Brand</option>
+        <option value="category">Category</option>
+        <option value="description">Description</option>
+        <option value="price">Price</option>
+      </select>
+      <button onclick="loadProducts(this)" id="btn" onClick="loadProducts">
+        Load
+      </button>
+    </form>
+    <ul id="sortlist"></ul>
+  </body>
+</html>
